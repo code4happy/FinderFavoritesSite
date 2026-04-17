@@ -55,7 +55,161 @@
             transform: translateY(-10px);
             transition: transform 0.3s ease;
         }
+
+        .download-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .download-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .download-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .download-card {
+            background: white;
+            color: #333;
+            border-radius: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 24px;
+            position: relative;
+        }
+
+        .version-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card-header h3 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .system-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .os-icon {
+            font-size: 1.5rem;
+        }
+
+        .card-footer {
+            background: #f8f9fa;
+            padding: 24px;
+            border-top: 1px solid #eee;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.6);
+        }
+
+        .button-icon {
+            font-size: 1.5rem;
+        }
+
+        .card-footer .note {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .card-footer .note a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card-footer .note a:hover {
+            text-decoration: underline;
+        }
+
+        .upgrade-note {
+            margin-top: 30px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .download-section h2 {
+                font-size: 2rem;
+            }
+            
+            .download-card {
+                margin: 0 20px;
+            }
+            
+            .system-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
     </style>
+
 </head>
 <body class="bg-light text-dark">
     <!-- 导航栏 -->
@@ -380,6 +534,52 @@
         </div>
     </section>
 
+    <!-- 免费版下载区域 -->
+    <section class="download-section">
+        <div class="container">
+            <h2>📥 下载免费版</h2>
+            <p class="download-subtitle">体验 Finder 效率提升的强大功能</p>
+            
+            <div class="download-card">
+                <div class="card-header">
+                    <div class="version-badge">Free</div>
+                    <h3>FinderFavorites v1.0</h3>
+                </div>
+                
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li>⭐ 最多收藏 5 个文件夹</li>
+                        <li>📁 智能子菜单展开</li>
+                        <li>🖥️ 单显示器支持</li>
+                        <li>🔧 系统级集成</li>
+                    </ul>
+                    
+                    <div class="system-info">
+                        <span class="os-icon">🍎</span>
+                        <span>macOS 12.0+</span>
+                        <span class="size-info">~10MB</span>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <a href="https://github.com/code4happy/FinderFavoritesSite/releases/download/v1Free/FinderFavorites-Free-v1.0.dmg" 
+                       class="download-button" 
+                       download>
+                        <span class="button-icon">⬇️</span>
+                        <span>立即下载</span>
+                    </a>
+                    
+                    <p class="note">免费版最多收藏 5 个文件夹，<a href="#pricing">升级专业版</a>解锁全部功能</p>
+                </div>
+            </div>
+            
+            <div class="upgrade-note">
+                <p>💡 提示：下载后请将 FinderFavorites.app 拖到 Applications 文件夹，以获得最佳体验</p>
+            </div>
+        </div>
+    </section>
+
+
     <!-- 页脚 -->
     <footer class="bg-dark text-white py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -434,6 +634,23 @@
                 nav.classList.remove('shadow-md');
                 nav.classList.add('shadow-sm');
             }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadButton = document.querySelector('.download-button');
+            
+            downloadButton.addEventListener('click', function(e) {
+                // 可以在这里添加下载统计代码
+                console.log('用户点击了下载按钮');
+                
+                // 例如：发送统计到 Google Analytics
+                // if (typeof gtag !== 'undefined') {
+                //     gtag('event', 'download', {
+                //         'version': 'v1.0-free',
+                //         'platform': 'macOS'
+                //     });
+                // }
+            });
         });
     </script>
 </body>
