@@ -22,7 +22,7 @@
   <rect x="100" y="80" width="400" height="280" fill="url(#macBgGradient)" rx="12" ry="12" stroke="#3A3A3C" stroke-width="2"/>
   
   <!-- 窗口标题栏 -->
-  <rect x="100" y="80" width="400" height="30" fill="#1C1C1E" rx="12" ry="12" ry="0"/>
+  <rect x="100" y="80" width="400" height="30" fill="#1C1C1E" rx="12" ry="0"/>
   
   <!-- 窗口控制按钮 -->
   <circle cx="118" cy="95" r="8" fill="#FF5F57"/>
